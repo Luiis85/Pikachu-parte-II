@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #eee;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #ffcb05; /* amarelo Pikachu */
+  text-shadow: 1px 1px 5px #000;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.movie {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 3px 10px rgb(255 203 5 / 0.4);
+  transition: transform 0.3s ease;
+}
+
+.movie:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgb(255 203 5 / 0.7);
+}
+
+.movie img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.movie h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ffcb05;
+}
+
+.synopsis {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #ddd;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .movie-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .movie {
+    padding: 12px;
+  }
+
+  .movie h2 {
+    font-size: 1.1rem;
+  }
+
+  .synopsis {
+    font-size: 0.85rem;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .movie-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+  }
+}
